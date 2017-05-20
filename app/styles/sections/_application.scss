@@ -1,0 +1,37 @@
+.main {
+  width: 90%;
+  position: relative;
+  margin: 0px  auto;
+}
+
+.intro-route {
+  background-color: black;
+  .title-view.ganesha-container {
+    display: none;
+  }
+}
+.title-view.ganesha-container {
+  width: 100px;
+  height: 100px;
+
+  svg.draw-ganesha * {
+    stroke: black;
+  }
+
+  .page-title {
+    font-size: 16px;
+    color: black;
+  }
+
+  &:hover {
+    animation: hover-enlarge-small 0.2s linear forwards;
+    cursor: pointer;
+  }
+}
+
+@keyframes hover-enlarge-small {
+  to {
+    width: 105px;
+    height: 105px;
+  }
+}

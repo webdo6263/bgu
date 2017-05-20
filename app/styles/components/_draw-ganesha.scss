@@ -1,0 +1,98 @@
+svg.draw-ganesha {
+  overflow: visible;
+  * {
+    stroke-width: 10px;
+    stroke: white;
+    fill: none;
+  }
+
+  #head-line {
+    stroke-dasharray: 31800;
+    stroke-dashoffset: 31800;
+  }
+
+  #nama {
+    stroke-dasharray: 3756;
+    stroke-dashoffset: 3756;
+  }
+
+  #torso {
+    stroke-dasharray: 79702;
+    stroke-dashoffset: 79702;
+  }
+
+  #arm-line {
+    stroke-dasharray: 1950;
+    stroke-dashoffset: 1950;
+  }
+
+  #trunk-line1 {
+    stroke-dasharray: 1756;
+    stroke-dashoffset: 1756;
+  }
+
+  #trunk-line2 {
+    stroke-dasharray: 1554;
+    stroke-dashoffset: 1554;
+  }
+}
+
+.ganesha-container {
+  position: relative;
+
+  &.white-stroke {
+    svg.draw-ganesha {
+      path {
+        animation: draw-white 10s linear forwards;
+      }
+    }
+  }
+  &.black-stroke {
+    svg.draw-ganesha {
+      path {
+        animation: draw-black 10s linear forwards;
+      }
+    }
+  }
+
+  .page-title {
+    text-align: center;
+    position: relative;
+    margin: 0px;
+    font-style: italic;
+    &.wipe-effect::after {
+      content: " ";
+      animation: show-text 5s linear forwards;
+      width: 100%;
+      background-color: black;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0px;
+    }
+  }
+}
+
+@keyframes show-text {
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes draw-white {
+  to {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #ddd;
+  }
+}
+
+@keyframes draw-black {
+  to {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #ddd;
+  }
+}

@@ -1,0 +1,21 @@
+.intro-view.ganesha-container {
+  margin: 0px auto;
+  width: 450px;
+  height: 450px;
+  .page-title {
+    font-size: 50px;
+    color: white;
+  }
+
+  &:hover {
+    animation: hover-enlarge 0.2s linear forwards;
+    cursor: pointer;
+  }
+}
+
+@keyframes hover-enlarge {
+  to {
+    width: 460px;
+    height: 460px;
+  }
+}
