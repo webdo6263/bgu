@@ -39,6 +39,11 @@ svg.draw-ganesha {
 
 .ganesha-container {
   position: relative;
+  display: inline-block;
+
+  .image-container {
+    margin: 0px auto;
+  }
 
   &.white-stroke {
     svg.draw-ganesha {
