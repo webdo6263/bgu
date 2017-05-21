@@ -1,3 +1,16 @@
-{{#link-to 'aboutus'}}
-  {{draw-ganesha class="intro-view white-stroke" titleText="Bengaluru Ganesha Utsava"}}
+{{#link-to 'contact-us'}}
+  {{#draw-ganesha
+    class="intro-view white-stroke"
+    titleText="Bengaluru Ganesh Utsava"
+    as |animatedText animationComplete|
+  }}
+    <span class="{{if animationComplete 'uniform-text' 'transparent-text'}}">
+      <p>
+        The 54th <span class="page-title">{{animatedText}}</span> upholds the rich tradition of culture and heritage that is India.
+      </p>
+      <p>
+        The 54th Bengaluru Ganesh Utsava upholds the rich tradition of culture and heritage that is India, through magnificent presentations of music, dance, drama and art by some of the finest artists of the country. The Bengaluru Ganesh Utsava, which has been organized by Shree Vidyaranya Yuvaka Sangha at the APS College Grounds, Basavanagudi, for close to 5 decades, is a major cultural festival of South Bangalore. Since the time of its commencement, the grandeur, style and elegance of The Bengaluru Ganesh Utsava has been unparalleled. Year after year, over 1 million people gather at the Utsava to celebrate the cultural extravaganza over a period of 11 days. Eminent musicians, theatre groups and ballet troupes from all across the country have graced the Utsava with their presence and riveting performances. These include Smt. MS Subbalakshmi, Mandolin U Srinivas, Dr. Balamurali Krishna, Dr. KJ Yesudas, Usha Uthup, Gantasal, Sivamani, SP Balasubrahmanyam, P Unnikrishnan, PB Sreenivas, Kunnakudi Vaidyanathan, Shankar Mahadevan and Daler Mehendi, all of whom have enthralled the audiences with their exceptional artistic abilities. Adding to the euphoria is the free entry for all that welcomes audiences to be a part of this cultural festival.
+      </p>
+    </span>
+  {{/draw-ganesha}}
 {{/link-to}}

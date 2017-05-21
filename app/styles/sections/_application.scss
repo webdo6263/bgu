@@ -1,31 +1,96 @@
+body:not(.intro-route) {
+  .main section {
+    position: relative;
+    height: 600px;
+    &::before {
+      content: " ";
+      display: block;
+      top: 0px;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-image: url('./procession.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 100% 50%;
+      opacity: 0.7;
+      z-index: -10;
+    }
+    &::after {
+      content: " ";
+      display: block;
+      top: 0px;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -10;
+      background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 300px, rgba(255, 255, 255, 0.7) 100%);
+    }
+  }
+}
+
 .main {
   width: 90%;
   position: relative;
   margin: 0px  auto;
+  padding: 0px 20px;
+  nav {
+    display: table;
+    margin: 0px auto;
+    font-size: 0px;
+    .nav-cell {
+      display: inline-block;
+      font-size: 16px;
+      vertical-align: top;
+      &:not(.brand-cell) {
+        background-image: url('./garland.png');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 30px 40px 60px;
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+      }
+    }
+  }
 }
 
-.intro-route {
+@media (max-width: 841px) {
+  body:not(.intro-route) .main section {
+    padding-top: 600px;
+    &::before {
+      background-position: 50% 0%;
+    }
+    &::after {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 100%);
+    }
+  }
+}
+@media (min-width: 842px) {
+  body:not(.intro-route) .main section {
+    padding-right: 300px;
+  }
+}
+
+.intro-route  {
   background-color: black;
-  .title-view.ganesha-container {
+  .main nav {
     display: none;
   }
 }
 .title-view.ganesha-container {
-  width: 100px;
-  height: 100px;
+  color: black;
+  font-size: 0.8rem;
+  .image-container {
+    width: 100px;
+    height: 100px;
+    &:hover {
+      animation: hover-enlarge-small 0.2s linear forwards;
+      cursor: pointer;
+    }
+  }
 
   svg.draw-ganesha * {
     stroke: black;
-  }
-
-  .page-title {
-    font-size: 16px;
-    color: black;
-  }
-
-  &:hover {
-    animation: hover-enlarge-small 0.2s linear forwards;
-    cursor: pointer;
   }
 }
 

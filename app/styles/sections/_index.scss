@@ -1,15 +1,22 @@
 .intro-view.ganesha-container {
   margin: 0px auto;
-  width: 450px;
-  height: 450px;
+
+  color: white;
   .page-title {
-    font-size: 50px;
+    font-size: 3rem;
     color: white;
   }
+  .uniform-text {
+    text-align: justify;
+  }
 
-  &:hover {
-    animation: hover-enlarge 0.2s linear forwards;
-    cursor: pointer;
+  .image-container {
+    width: 450px;
+    height: 450px;
+    &:hover {
+      animation: hover-enlarge 0.2s linear forwards;
+      cursor: pointer;
+    }
   }
 }
 
