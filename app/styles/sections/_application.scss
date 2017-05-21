@@ -14,7 +14,7 @@ body:not(.intro-route) {
       background-size: contain;
       background-position: 100% 50%;
       opacity: 0.7;
-      z-index: -20;
+      z-index: -10;
     }
     &::after {
       content: " ";
@@ -24,7 +24,7 @@ body:not(.intro-route) {
       height: 100%;
       width: 100%;
       z-index: -10;
-      background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(255, 255, 255, 0.6) 300px, rgba(255, 255, 255, 0) 600px);
+      background-image: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 300px, rgba(255, 255, 255, 0.7) 100%);
     }
   }
 }
